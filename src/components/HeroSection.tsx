@@ -45,7 +45,7 @@ export function HeroSection() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
               Eficiência operacional e{" "}
-              <span className="text-accent">Inovação e Segurança assistencial.</span>
+              <span className="text-accent">BAHHHH e Segurança assistencial.</span>
             </motion.h1>
 
             <motion.p
