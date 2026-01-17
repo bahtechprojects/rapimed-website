@@ -1,9 +1,10 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
+import { StatsSection } from "@/components/StatsSection";
 import { AboutSection } from "@/components/AboutSection";
 import { SolutionsSection } from "@/components/SolutionsSection";
 import { ServicesSection } from "@/components/ServicesSection";
-import { CareerCTA } from "@/components/CareerCTA";
+import { CareersSection } from "@/components/CareersSection";
 import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 
@@ -13,10 +14,11 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
+        <StatsSection />
         <AboutSection />
         <SolutionsSection />
         <ServicesSection />
-        <CareerCTA />
+        <CareersSection />
         <ContactSection />
       </main>
       <Footer />

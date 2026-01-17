@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/rapimed-logo.png";
@@ -108,9 +108,15 @@ export function Header() {
             </a>
           </div>
           <div className="flex items-center gap-4">
-            <a href="https://www.facebook.com/rapimedsaude/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">Facebook</a>
-            <a href="https://www.instagram.com/rapimedsaude/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">Instagram</a>
-            <a href="http://br.linkedin.com/company/rapimed" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">LinkedIn</a>
+            <a href="https://www.facebook.com/rapimedsaude/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" aria-label="Facebook">
+              <Facebook className="w-4 h-4" />
+            </a>
+            <a href="https://www.instagram.com/rapimedsaude/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" aria-label="Instagram">
+              <Instagram className="w-4 h-4" />
+            </a>
+            <a href="http://br.linkedin.com/company/rapimed" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" aria-label="LinkedIn">
+              <Linkedin className="w-4 h-4" />
+            </a>
           </div>
         </div>
       </div>
