@@ -12,7 +12,7 @@ export function HeroSection() {
       </div>
 
       {/* Grid Pattern Overlay */}
-      <div 
+      <div
         className="absolute inset-0 opacity-5"
         style={{
           backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
@@ -45,7 +45,7 @@ export function HeroSection() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
               Eficiência operacional e{" "}
-              <span className="text-accent">Segurança assistencial.</span>
+              <span className="text-accent">Inovação e Segurança assistencial.</span>
             </motion.h1>
 
             <motion.p
@@ -54,8 +54,8 @@ export function HeroSection() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-xl"
             >
-              Atuamos em todo o Brasil transformando a saúde hospitalar e municipal 
-              com escalas 100% cobertas, protocolos baseados em IA e capacitação 
+              Atuamos em todo o Brasil transformando a saúde hospitalar e municipal
+              com escalas 100% cobertas, protocolos baseados em IA e capacitação
               contínua do corpo clínico.
             </motion.p>
 
