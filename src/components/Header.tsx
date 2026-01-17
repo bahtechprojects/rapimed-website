@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import logo from "@/assets/rapimed-logo.png";
 
 const navLinks = [
-  { label: "A Rapimed", href: "/#sobre" },
+  { label: "Sobre a Rapimed", href: "/#sobre" },
   { label: "Soluções", href: "/solucoes" },
   { label: "Serviços", href: "/#servicos" },
   { label: "Contato", href: "/#contato" },
@@ -27,11 +27,11 @@ export function Header() {
 
   const handleNavClick = (href: string) => {
     setIsMobileMenuOpen(false);
-    
+
     // If it's a hash link on the current page or home page
     if (href.includes("#")) {
       const [path, hash] = href.split("#");
-      
+
       // If we're on the same page or it's the home page
       if (path === "/" || path === "" || location.pathname === path) {
         const element = document.getElementById(hash);
@@ -43,7 +43,7 @@ export function Header() {
   };
 
   const renderNavLink = (link: { label: string; href: string }) => {
-    const isActive = location.pathname === link.href || 
+    const isActive = location.pathname === link.href ||
       (link.href === "/solucoes" && location.pathname === "/solucoes");
 
     if (link.href.startsWith("/#")) {
@@ -54,9 +54,8 @@ export function Header() {
           <a
             key={link.label}
             href={link.href.replace("/", "")}
-            className={`text-foreground/80 hover:text-primary font-medium transition-colors relative group ${
-              isActive ? "text-primary" : ""
-            }`}
+            className={`text-foreground/80 hover:text-primary font-medium transition-colors relative group ${isActive ? "text-primary" : ""
+              }`}
             onClick={() => handleNavClick(link.href)}
           >
             {link.label}
@@ -83,14 +82,12 @@ export function Header() {
       <Link
         key={link.label}
         to={link.href}
-        className={`text-foreground/80 hover:text-primary font-medium transition-colors relative group ${
-          isActive ? "text-primary" : ""
-        }`}
+        className={`text-foreground/80 hover:text-primary font-medium transition-colors relative group ${isActive ? "text-primary" : ""
+          }`}
       >
         {link.label}
-        <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${
-          isActive ? "w-full" : "w-0 group-hover:w-full"
-        }`} />
+        <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+          }`} />
       </Link>
     );
   };
@@ -120,11 +117,10 @@ export function Header() {
 
       {/* Main Header */}
       <header
-        className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-background/95 backdrop-blur-md shadow-lg"
-            : "bg-background"
-        }`}
+        className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled
+          ? "bg-background/95 backdrop-blur-md shadow-lg"
+          : "bg-background"
+          }`}
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
@@ -198,9 +194,8 @@ export function Header() {
                     <Link
                       key={link.label}
                       to={link.href}
-                      className={`text-foreground/80 hover:text-primary font-medium py-2 transition-colors ${
-                        location.pathname === link.href ? "text-primary" : ""
-                      }`}
+                      className={`text-foreground/80 hover:text-primary font-medium py-2 transition-colors ${location.pathname === link.href ? "text-primary" : ""
+                        }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {link.label}
