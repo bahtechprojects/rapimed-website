@@ -44,8 +44,7 @@ export default function Careers() {
                         >
                             <span className="font-medium text-lg mb-2 block text-white/90 italic">vagas abertas</span>
                             <h1 className="text-4xl md:text-5xl lg:text-4,5xl font-bold mb-6 leading-tight">
-                                Junte-se ao corpo clínico
-                                de elite da Rapimed.
+                                Junte-se ao corpo clínico de elite da Rapimed.
                             </h1>
                             <p className="text-lg text-white/90 mb-8 max-w-xl leading-relaxed">
                                 Buscamos profissionais comprometidos com a excelência. Oferecemos suporte
