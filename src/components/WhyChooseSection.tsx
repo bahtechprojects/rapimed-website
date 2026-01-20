@@ -22,7 +22,7 @@ const solutions = [
         icon: Shield,
         title: "Protocolos e Governança",
         description: "Implementação de diretrizes clínicas para síndromes tempo-sensíveis (AVC, Sepse, Infarto), garantindo agilidade e racionalização de custos.",
-        color: "from-accent to-amber-600",
+        color: "from-[#30979b] to-[#257578]",
     },
     {
         icon: GraduationCap,
@@ -63,7 +63,7 @@ export function WhyChooseSection() {
                             />
                             {/* Icon Badge */}
                             <motion.div
-                                className="absolute top-6 right-6 bg-[#4ed1c5] p-4 rounded-full shadow-lg"
+                                className="absolute top-6 right-6 bg-[#296365] p-4 rounded-full shadow-lg"
                                 animate={{ y: [0, -8, 0] }}
                                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                             >
