@@ -25,6 +25,7 @@ import {
   HeartPulse,
   ArrowRight,
 } from "lucide-react";
+import { HoverCard } from "@/components/ui/HoverCard";
 
 const servicosMedicos = [
   {
@@ -193,14 +194,14 @@ function SolutionSection({
           className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-12"
         >
           {items.map((item, index) => (
-            <motion.div
+            <HoverCard
               key={item.title}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5 + index * 0.1 }}
-              className="bg-card p-6 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 cursor-pointer relative group overflow-hidden border border-border"
+              className="bg-card p-6 border border-border"
+              gradientColor={gradientColor}
             >
-              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${gradientColor} opacity-0 group-hover:opacity-100 transition-opacity`} />
               <div className={`w-12 h-12 rounded-lg bg-gradient-to-br ${gradientColor} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                 <item.icon className="w-6 h-6 text-white" />
               </div>
@@ -210,7 +211,7 @@ function SolutionSection({
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
-            </motion.div>
+            </HoverCard>
           ))}
         </motion.div>
       </div>

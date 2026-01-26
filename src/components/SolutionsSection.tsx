@@ -10,6 +10,7 @@ import {
   ChevronDown,
   ChevronUp
 } from "lucide-react";
+import { HoverCard } from "@/components/ui/HoverCard";
 
 const solutions = [
   {
@@ -85,15 +86,13 @@ export function SolutionsSection() {
             className="space-y-4"
           >
             {solutions.map((solution, index) => (
-              <motion.div
+              <HoverCard
                 key={solution.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.3 + index * 0.1 }}
-                className={`bg-card rounded-2xl border border-border overflow-hidden relative group transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 ${expandedIndex === index ? "shadow-lg border-primary/30" : "hover:shadow-md"
-                  }`}
+                className={`rounded-2xl ${expandedIndex === index ? "shadow-lg border-primary/30" : "hover:shadow-md"}`}
               >
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#2a6365] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 <button
                   onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
                   className="w-full p-6 flex items-center gap-4 text-left"
@@ -128,7 +127,7 @@ export function SolutionsSection() {
                     </p>
                   </div>
                 </motion.div>
-              </motion.div>
+              </HoverCard>
             ))}
           </motion.div>
         </div>

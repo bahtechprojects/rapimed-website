@@ -4,6 +4,7 @@ import { StatsSection } from "@/components/StatsSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { motion } from "framer-motion";
 import { Award, Users, Target, Rocket, Heart } from "lucide-react";
+import { HoverCard } from "@/components/ui/HoverCard";
 
 export default function About() {
     return (
@@ -73,14 +74,13 @@ export default function About() {
                     <div className="container mx-auto px-4">
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {/* Mission */}
-                            <motion.div
+                            <HoverCard
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.1 }}
-                                className="bg-background p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 cursor-pointer relative group overflow-hidden"
+                                className="bg-background p-8"
                             >
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#2a6365] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
                                     <Rocket className="w-6 h-6 text-primary" />
                                 </div>
@@ -88,17 +88,16 @@ export default function About() {
                                 <p className="text-muted-foreground">
                                     Levar equipes seguras e soluções em saúde de forma rápida e qualificada para as regiões Sul e Sudeste do Brasil.
                                 </p>
-                            </motion.div>
+                            </HoverCard>
 
                             {/* Vision */}
-                            <motion.div
+                            <HoverCard
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2 }}
-                                className="bg-background p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 cursor-pointer relative group overflow-hidden"
+                                className="bg-background p-8"
                             >
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#2a6365] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
                                     <Target className="w-6 h-6 text-primary" />
                                 </div>
@@ -106,17 +105,16 @@ export default function About() {
                                 <p className="text-muted-foreground">
                                     Triplicar o número de horas de atendimento até dezembro de 2026.
                                 </p>
-                            </motion.div>
+                            </HoverCard>
 
                             {/* Values */}
-                            <motion.div
+                            <HoverCard
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3 }}
-                                className="bg-background p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 cursor-pointer relative group overflow-hidden"
+                                className="bg-background p-8"
                             >
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#2a6365] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
                                     <Award className="w-6 h-6 text-primary" />
                                 </div>
@@ -124,25 +122,24 @@ export default function About() {
                                 <p className="text-muted-foreground">
                                     Responsabilidade, agilidade, qualidade, ética e senso de dono.
                                 </p>
-                            </motion.div>
+                            </HoverCard>
 
                             {/* Purpose */}
-                            <motion.div
+                            <HoverCard
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.4 }}
-                                className="bg-background p-8 rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105 hover:-translate-y-1 cursor-pointer relative group overflow-hidden"
+                                className="bg-background p-8"
                             >
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#2a6365] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 transition-transform duration-300 group-hover:scale-110">
                                     <Heart className="w-6 h-6 text-primary" />
                                 </div>
                                 <h3 className="text-xl font-bold mb-4">Propósito</h3>
                                 <p className="text-muted-foreground">
-                                    Levar saúde de qualidade a milhares de pessoas, assim como entregar inteligência estratégica para os gestores públicos e privados, com segurança, tranquilidade, agilidade e organização.
+                                    Levar saúde de qualidade a milhares de pessoas, assim como entregar inteligência estratégica para os gestores públicos e privados.
                                 </p>
-                            </motion.div>
+                            </HoverCard>
                         </div>
                     </div>
                 </section>
