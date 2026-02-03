@@ -23,12 +23,6 @@ jobs:
           npm install
           npm run build
 
-      - name: Testar conexão FTP (porta 21)
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y netcat-openbsd
-          nc -vz -w 8 ${{ secrets.FTP_SERVER }} 21
-
       - name: FTP Deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
@@ -36,7 +30,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: public_html/
-          protocol: ftp
-          port: 21
+          server-dir: ./
           timeout: 120000
